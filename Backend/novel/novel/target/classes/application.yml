@@ -1,0 +1,19 @@
+server:
+    port: 8080
+management:
+    endpoints:
+        web:
+            exposure:
+                include:
+                    - "health"
+                    - "info"
+spring:
+    jpa:
+        hibernate:
+            ddl-auto: update
+        database-platform: org.hibernate.dialect.PostgreSQL81Dialect
+        defer-datasource-initialization: true
+    datasource:
+        url: jdbc:postgresql://java-angular-82322.cqrfh5fisbnz.us-west-1.rds.amazonaws.com:5432/postgres
+        username: postgres
+        password: password123
